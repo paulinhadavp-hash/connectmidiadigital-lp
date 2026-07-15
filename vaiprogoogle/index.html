@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VaiProGoogle: Presença profissional que gera contato no WhatsApp</title>
+<meta name="description" content="Landing page profissional com domínio, hospedagem e botão de WhatsApp. Pagamento único de R$399,90.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14181F;
+    --muted:#5B6472;
+    --bg-light:#F6F7F9;
+    --bg-card:#FFFFFF;
+    --bg-dark:#0E1116;
+    --bg-dark-2:#161B24;
+    --line:#E4E6EA;
+    --line-dark:#262C38;
+    --brand:#E8542A;
+    --brand-ink:#C0431F;
+    --whatsapp:#25D366;
+    --whatsapp-ink:#1DA851;
+    --g-blue:#4285F4;
+    --g-red:#EA4335;
+    --g-yellow:#FBBC04;
+    --g-green:#34A853;
+    --radius:16px;
+    --max:600px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
+  }
+  body{
+    margin:0;
+    font-family:'Inter',system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--bg-light);
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Space Grotesk',system-ui,sans-serif;
+    line-height:1.15;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  p{margin:0;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px;}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+
+  /* Google dot cluster: signature element */
+  .gdots{display:inline-flex;gap:4px;vertical-align:middle;margin:0 2px;}
+  .gdots span{width:7px;height:7px;border-radius:50%;display:inline-block;}
+  .gdots span:nth-child(1){background:var(--g-blue);}
+  .gdots span:nth-child(2){background:var(--g-red);}
+  .gdots span:nth-child(3){background:var(--g-yellow);}
+  .gdots span:nth-child(4){background:var(--g-green);}
+
+  /* Header */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,0.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:var(--max);margin:0 auto;}
+  .logo{display:flex;align-items:center;gap:10px;font-family:'Space Grotesk';font-weight:700;font-size:17px;}
+  .logo-mark{
+    width:32px;height:32px;border-radius:9px;
+    background:var(--brand);
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-weight:700;font-size:16px;
+    flex-shrink:0;
+  }
+  .btn-wa-mini{
+    background:var(--whatsapp);color:#fff;font-weight:600;font-size:13px;
+    padding:9px 14px;border-radius:100px;display:flex;align-items:center;gap:6px;
+    white-space:nowrap;
+  }
+
+  /* Hero */
+  .hero{background:var(--bg-dark);color:#fff;padding:56px 0 44px;position:relative;overflow:hidden;}
+  .hero::after{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(circle at 80% 0%, rgba(66,133,244,0.16), transparent 55%),
+               radial-gradient(circle at 10% 100%, rgba(232,84,42,0.14), transparent 50%);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative;text-align:center;}
+  .badge{
+    display:inline-flex;align-items:center;gap:8px;
+    background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);
+    padding:7px 14px;border-radius:100px;font-size:13px;color:#C7CCD6;margin-bottom:22px;
+  }
+  .hero h1{font-size:33px;font-weight:700;color:#fff;margin-bottom:18px;}
+  .hero h1 .hl{color:var(--brand);}
+  .hero p.sub{font-size:16px;color:#AEB4C0;line-height:1.55;max-width:440px;margin:0 auto 30px;}
+  .btn-primary{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    background:var(--whatsapp);color:#fff;font-weight:700;font-size:16px;
+    padding:17px 26px;border-radius:14px;width:100%;max-width:360px;
+    box-shadow:0 8px 24px rgba(37,211,102,0.28);
+    border:none;cursor:pointer;
+  }
+  .btn-primary:active{background:var(--whatsapp-ink);}
+  .micro{font-size:12.5px;color:#8992A0;margin-top:12px;}
+
+  /* Sections */
+  section{padding:52px 0;}
+  .section-head{text-align:center;margin-bottom:34px;}
+  .section-head .eyebrow{margin-bottom:10px;}
+  .section-head h2{font-size:26px;font-weight:700;}
+  .section-head p{color:var(--muted);font-size:15px;margin-top:12px;line-height:1.55;}
+
+  /* Benefit cards */
+  .cards{display:flex;flex-direction:column;gap:14px;}
+  .card{
+    background:var(--bg-card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:24px;
+  }
+  .card-icon{
+    width:44px;height:44px;border-radius:11px;background:#FDEDE7;
+    display:flex;align-items:center;justify-content:center;margin-bottom:16px;
+  }
+  .card-icon svg{width:22px;height:22px;stroke:var(--brand);}
+  .card h3{font-size:17px;font-weight:600;margin-bottom:7px;}
+  .card p{color:var(--muted);font-size:14.5px;line-height:1.55;}
+
+  /* Scenarios (adjusted social proof) */
+  .scenario-disclaimer{
+    font-size:12.5px;color:var(--muted);text-align:center;margin-bottom:22px;
+    background:#EEF0F3;border:1px solid var(--line);padding:10px 16px;border-radius:10px;
+  }
+  .scenario{
+    background:var(--bg-card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:24px;margin-bottom:14px;
+  }
+  .scenario h3{font-size:16px;font-weight:600;margin-bottom:14px;}
+  .scenario-row{display:flex;flex-direction:column;gap:10px;}
+  .scenario-tag{
+    font-family:'IBM Plex Mono';font-size:11px;letter-spacing:0.06em;font-weight:500;
+    padding:3px 9px;border-radius:6px;display:inline-block;width:fit-content;
+  }
+  .tag-before{background:#F1F2F4;color:var(--muted);}
+  .tag-after{background:#E9F7EE;color:var(--g-green);}
+  .scenario p.text{font-size:14px;color:var(--ink);line-height:1.5;margin-top:6px;}
+
+  /* Pricing */
+  .price-card{
+    background:var(--bg-dark);color:#fff;border-radius:20px;padding:32px 26px;text-align:center;
+    position:relative;overflow:hidden;
+  }
+  .price-card::before{
+    content:"";position:absolute;top:-40%;right:-20%;width:60%;height:80%;
+    background:radial-gradient(circle, rgba(232,84,42,0.25), transparent 70%);
+  }
+  .price-card-inner{position:relative;}
+  .price-label{font-size:14px;color:#AEB4C0;margin-bottom:6px;}
+  .price-value{font-family:'Space Grotesk';font-size:44px;font-weight:700;color:#fff;}
+  .price-note{font-size:13px;color:#8992A0;margin-top:4px;margin-bottom:26px;}
+  .price-list{list-style:none;padding:0;margin:0 0 28px;text-align:left;display:flex;flex-direction:column;gap:13px;}
+  .price-list li{display:flex;align-items:flex-start;gap:10px;font-size:14.5px;color:#D3D7DE;}
+  .price-list svg{width:18px;height:18px;stroke:var(--g-green);flex-shrink:0;margin-top:1px;}
+  .scarcity{
+    font-size:13px;color:#C7CCD6;background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:10px 14px;margin-bottom:20px;
+  }
+
+  /* FAQ */
+  .faq-item{border-bottom:1px solid var(--line);padding:18px 0;}
+  .faq-q{display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-weight:600;font-size:15px;gap:12px;}
+  .faq-q .plus{font-size:20px;color:var(--brand);transition:transform 0.2s;flex-shrink:0;}
+  .faq-item.open .plus{transform:rotate(45deg);}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height 0.25s ease;}
+  .faq-a p{padding-top:12px;color:var(--muted);font-size:14px;line-height:1.6;}
+
+  /* Final CTA */
+  .final-cta{background:linear-gradient(180deg,#151A22,var(--bg-dark));color:#fff;text-align:center;}
+  .final-cta h2{font-size:25px;font-weight:700;margin-bottom:14px;}
+  .final-cta p{color:#AEB4C0;font-size:15px;line-height:1.55;margin-bottom:26px;}
+
+  footer{background:var(--bg-dark);border-top:1px solid var(--line-dark);padding:32px 0 40px;}
+  .foot-contact{display:flex;flex-direction:column;gap:14px;margin-bottom:24px;}
+  .foot-row{display:flex;align-items:center;gap:10px;color:#C7CCD6;font-size:14.5px;}
+  .foot-icon{
+    width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .foot-icon.wa{background:rgba(37,211,102,0.15);}
+  .foot-icon.ig{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);}
+  .foot-icon svg{width:17px;height:17px;stroke:#fff;}
+  .foot-legal{border-top:1px solid var(--line-dark);padding-top:20px;font-size:12.5px;color:#6B7280;text-align:center;}
+  .foot-legal a{color:#8992A0;margin:0 8px;}
+
+  @media(min-width:600px){
+    .cards{flex-direction:row;flex-wrap:wrap;}
+    .card{flex:1 1 calc(50% - 7px);}
+    .hero h1{font-size:38px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <div class="logo-mark">V</div>
+      VaiProGoogle
+    </div>
+    <a class="btn-wa-mini" href="https://wa.me/5521996133574?text=Ol%C3%A1!%20Vi%20a%20landing%20page%20e%20quero%20saber%20mais." target="_blank" rel="noopener">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="badge">
+      <span class="gdots"><span></span><span></span><span></span><span></span></span>
+      Presença profissional online
+    </div>
+    <h1>Quando alguém te procurar no <span class="hl">Google</span>, o que essa pessoa encontra?</h1>
+    <p class="sub">Uma landing page profissional faz seu negócio parecer sério desde o primeiro clique. Com domínio, hospedagem e botão de WhatsApp prontos.</p>
+    <a class="btn-primary" href="https://wa.me/5521996133574?text=Ol%C3%A1!%20Vi%20a%20landing%20page%20e%20quero%20saber%20mais." target="_blank" rel="noopener">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      Falar com especialista
+    </a>
+    <p class="micro">Resposta em minutos · Sem compromisso</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Por que ter uma</div>
+      <h2>O que você ganha com um site</h2>
+      <p>Enquanto você lê isso, alguém pode estar procurando por um negócio como o seu.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></div>
+        <h3>Fácil de encontrar</h3>
+        <p>Um link direto pra mandar em anúncio, bio do Instagram ou indicação, sem depender só do boca a boca.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg></div>
+        <h3>Credibilidade instantânea</h3>
+        <p>Um negócio sem site parece amador. Transmita confiança desde o primeiro clique.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <h3>Funciona 24/7</h3>
+        <p>Seu site não dorme. Ele segue captando contatos mesmo enquanto você está ocupado.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><path d="M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20Z"/></svg></div>
+        <h3>Domínio e hospedagem inclusos</h3>
+        <p>Você não paga nada além do valor único. Cuidamos da parte técnica pra você.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--bg-card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">O que é possível</div>
+      <h2>Cenários que mostram o potencial</h2>
+    </div>
+    <p class="scenario-disclaimer">Exemplos ilustrativos para explicar o tipo de transformação. Não representam clientes ou resultados específicos, que variam conforme nicho, região e divulgação.</p>
+
+    <div class="scenario">
+      <h3>Prestador de serviço local</h3>
+      <div class="scenario-row">
+        <span class="scenario-tag tag-before">ANTES</span>
+        <p class="text">Depende apenas de indicação boca a boca para fechar novos serviços.</p>
+        <span class="scenario-tag tag-after">DEPOIS</span>
+        <p class="text">Tem um link profissional para enviar em anúncios e conversas, com botão direto para o WhatsApp.</p>
+      </div>
+    </div>
+    <div class="scenario">
+      <h3>Profissional liberal (autônomo)</h3>
+      <div class="scenario-row">
+        <span class="scenario-tag tag-before">ANTES</span>
+        <p class="text">Presença forte na região, mas invisível para quem pesquisa online.</p>
+        <span class="scenario-tag tag-after">DEPOIS</span>
+        <p class="text">Página com cara de negócio estabelecido, reforçando confiança antes mesmo do primeiro contato.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Investimento</div>
+      <h2>Invista no seu negócio</h2>
+      <p>Planos transparentes. Sem letras miúdas. Pagamento único.</p>
+    </div>
+    <div class="price-card">
+      <div class="price-card-inner">
+        <div class="price-label">Presença Profissional</div>
+        <div class="price-value">R$ 399,90</div>
+        <div class="price-note">único, sem mensalidades</div>
+        <ul class="price-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Landing page profissional</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Domínio personalizado</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Hospedagem por 1 ano incluída</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Botão de WhatsApp nativo</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Estrutura pensada para conversão</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Entrega em até 48h após aprovação</li>
+        </ul>
+        <div class="scarcity">Para manter a qualidade de entrega, aceitamos um número limitado de projetos novos por semana.</div>
+        <a class="btn-primary" href="https://wa.me/5521996133574?text=Ol%C3%A1!%20Quero%20contratar%20a%20landing%20page%20por%20R%24399%2C90." target="_blank" rel="noopener">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          Chamar no WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--bg-card);border-top:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Dúvidas comuns</div>
+      <h2>Perguntas frequentes</h2>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Isso vai me colocar no topo do Google?<span class="plus">+</span></div>
+      <div class="faq-a"><p>A landing page é a base: um site profissional, rápido e indexável pelo Google. Aparecer bem posicionado nas buscas (SEO) ou nos anúncios do Google Ads depende de estratégias adicionais, que também trabalhamos separadamente caso você queira acelerar esse resultado.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Preciso pagar algo depois do valor único?<span class="plus">+</span></div>
+      <div class="faq-a"><p>A hospedagem e o domínio já estão inclusos no primeiro ano. Antes do vencimento, avisamos você com antecedência sobre a renovação.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Consigo pedir alterações depois de pronta?<span class="plus">+</span></div>
+      <div class="faq-a"><p>Sim, pequenos ajustes de texto e imagem estão inclusos na entrega. Mudanças estruturais maiores podem ter um custo à parte, combinado com transparência antes de qualquer cobrança.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Quanto tempo leva para ficar pronta?<span class="plus">+</span></div>
+      <div class="faq-a"><p>Entre 24h e 48h após a aprovação do conteúdo e das informações do seu negócio.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="wrap">
+    <h2>Pronto para ter uma presença que passa confiança?</h2>
+    <p>Fale com a gente pelo WhatsApp e dê o primeiro passo para ter uma landing page profissional.</p>
+    <a class="btn-primary" href="https://wa.me/5521996133574?text=Ol%C3%A1!%20Vi%20a%20landing%20page%20e%20quero%20saber%20mais." target="_blank" rel="noopener">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      Falar com especialista
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-contact">
+      <a class="foot-row" href="https://wa.me/5521996133574" target="_blank" rel="noopener">
+        <div class="foot-icon wa"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
+        Contato: 21 99613-3574 (WhatsApp)
+      </a>
+      <a class="foot-row" href="https://instagram.com/connect_midiadigital" target="_blank" rel="noopener">
+        <div class="foot-icon ig"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg></div>
+        @connect_midiadigital
+      </a>
+    </div>
+    <div class="foot-legal">
+      © 2026 VaiProGoogle / Connect Mídia Digital. Todos os direitos reservados.<br>
+      <a href="#">Política de Privacidade</a> · <a href="#">Termos de Uso</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleFaq(el){
+    const item = el.parentElement;
+    const answer = item.querySelector('.faq-a');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-a').style.maxHeight = null;
+    });
+    if(!isOpen){
+      item.classList.add('open');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+    }
+  }
+</script>
+
+</body>
+</html>
