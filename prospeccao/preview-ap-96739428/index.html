@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Angelica Padilha — Psicóloga Clínica</title>
+<title>Angelica Padilha — Psicóloga Clínica | Centro, RJ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --ink:#1C2620;
@@ -16,13 +16,15 @@
     --bg-card:#FFFFFF;
     --line:#DDE3DC;
     --pine:#2F6F62;
-    --pine-deep:#204A41;
+    --pine-deep:#1B3E35;
     --brass:#B08A2E;
+    --brass-light:#F3E9D2;
     --whatsapp:#25D366;
-    --radius:18px;
-    --max:600px;
+    --radius:20px;
+    --max:640px;
   }
   *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
   body{
     margin:0;
     font-family:'Public Sans',system-ui,sans-serif;
@@ -38,151 +40,145 @@
     letter-spacing:-0.01em;
   }
   p{margin:0;}
-  a{color:inherit;}
+  a{color:inherit;text-decoration:none;}
   .wrap{max-width:var(--max);margin:0 auto;padding:0 24px;}
   .eyebrow{
-    font-family:'Public Sans';
-    font-size:12.5px;
-    letter-spacing:0.1em;
-    text-transform:uppercase;
-    color:var(--pine);
-    font-weight:600;
+    font-family:'Public Sans';font-size:12.5px;letter-spacing:0.1em;
+    text-transform:uppercase;color:var(--pine);font-weight:600;
   }
+  section{padding:48px 0;}
+  .section-head{margin-bottom:26px;text-align:center;}
+  .section-head h2{font-size:24px;color:var(--pine-deep);margin-top:8px;}
 
-  /* Signature: breathing line — a slow, continuous wave that never repeats abruptly */
-  .breath-line{width:100%;height:40px;display:block;margin:28px 0;}
-  .breath-line path{
-    fill:none;stroke:var(--pine);stroke-width:1.6;stroke-linecap:round;
-    opacity:0.55;
+  header{position:sticky;top:0;z-index:50;background:rgba(243,245,241,0.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  .header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:var(--max);margin:0 auto;}
+  .brand{font-family:'Fraunces';font-weight:600;font-size:16px;color:var(--pine-deep);}
+  .btn-mini{background:var(--pine-deep);color:#fff;font-size:13px;font-weight:600;padding:9px 16px;border-radius:100px;}
+
+  .hero{padding:44px 0 8px;text-align:center;}
+  .portrait{
+    width:120px;height:120px;border-radius:50%;margin:0 auto 22px;
+    background:linear-gradient(160deg,var(--pine) 0%, var(--pine-deep) 100%);
+    display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;
   }
-  @media (prefers-reduced-motion: no-preference){
-    .breath-line path{
-      stroke-dasharray:600;
-      stroke-dashoffset:600;
-      animation:draw 3.2s ease-out forwards;
-    }
-    @keyframes draw{ to{ stroke-dashoffset:0; } }
-  }
-
-  header{padding:32px 0 0;}
-  .header-inner{display:flex;align-items:center;justify-content:space-between;}
-  .brand{font-family:'Fraunces';font-size:15px;font-weight:500;color:var(--pine-deep);}
-
-  .hero{padding:20px 0 8px;text-align:center;}
-  .avatar{
-    width:76px;height:76px;border-radius:50%;
-    background:linear-gradient(155deg,var(--pine),var(--pine-deep));
-    color:#fff;display:flex;align-items:center;justify-content:center;
-    font-family:'Fraunces';font-size:26px;font-weight:500;
-    margin:0 auto 22px;
-  }
-  .hero h1{font-size:32px;color:var(--pine-deep);margin-bottom:10px;}
-  .hero .role{font-size:15px;color:var(--muted);margin-bottom:4px;}
-  .hero .locale{font-size:13.5px;color:var(--muted);}
-
+  .portrait svg{width:64px;height:64px;opacity:0.9;}
+  .hero .eyebrow{display:block;margin-bottom:14px;}
+  .hero h1{font-size:30px;color:var(--pine-deep);margin-bottom:14px;}
+  .hero h1 em{font-style:normal;color:var(--brass);}
+  .hero p.sub{font-size:15.5px;color:var(--muted);line-height:1.6;max-width:440px;margin:0 auto 28px;}
   .btn-primary{
     display:inline-flex;align-items:center;justify-content:center;gap:10px;
-    background:var(--whatsapp);color:#fff;font-weight:600;font-size:15.5px;
-    padding:15px 28px;border-radius:100px;
-    text-decoration:none;
-    box-shadow:0 8px 20px rgba(37,211,102,0.25);
-    margin-top:26px;
+    background:var(--whatsapp);color:#fff;font-weight:700;font-size:15.5px;
+    padding:16px 30px;border-radius:100px;box-shadow:0 10px 24px rgba(37,211,102,0.28);
   }
 
-  section{padding:40px 0;}
-  .section-head{margin-bottom:24px;}
-  .section-head h2{font-size:22px;color:var(--pine-deep);}
+  .badges{display:flex;justify-content:center;gap:28px;margin-top:34px;flex-wrap:wrap;}
+  .badge-item{text-align:center;}
+  .badge-item .top{font-family:'Fraunces';font-size:15px;color:var(--pine-deep);font-weight:600;}
+  .badge-item .bot{font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;}
 
-  .about p{font-size:15.5px;line-height:1.7;color:var(--ink);}
+  .pain{background:var(--bg-card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .pain h2{font-size:22px;}
+  .pain p{font-size:15px;color:var(--muted);line-height:1.7;max-width:520px;margin:16px auto 0;}
 
-  .steps{display:flex;flex-direction:column;gap:16px;}
-  .step{display:flex;gap:16px;align-items:flex-start;}
-  .step-mark{
-    width:8px;height:8px;border-radius:50%;background:var(--brass);
-    margin-top:8px;flex-shrink:0;
+  .quote-block{
+    background:var(--pine-deep);color:#fff;border-radius:24px;padding:36px 28px;text-align:center;margin:8px 0;
   }
-  .step h3{font-size:15.5px;font-weight:600;font-family:'Public Sans';margin-bottom:4px;color:var(--ink);}
-  .step p{font-size:14px;color:var(--muted);line-height:1.55;}
+  .quote-block p{font-family:'Fraunces';font-size:19px;font-style:italic;line-height:1.5;color:#EAF2EF;max-width:460px;margin:0 auto 18px;}
+  .quote-who{font-size:13px;color:#9FC2B7;}
 
-  .tags{display:flex;flex-wrap:wrap;gap:10px;}
-  .tag{
-    background:var(--bg-card);border:1px solid var(--line);border-radius:100px;
-    padding:9px 16px;font-size:13.5px;color:var(--pine-deep);
-  }
+  .icon-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .icon-card{background:var(--bg-card);border:1px solid var(--line);border-radius:16px;padding:20px 16px;text-align:center;}
+  .icon-card .ic{font-size:26px;margin-bottom:10px;display:block;}
+  .icon-card .lb{font-size:13.5px;font-weight:600;color:var(--ink);}
 
-  .cta-final{
-    background:var(--pine-deep);color:#fff;border-radius:24px;
-    padding:40px 28px;text-align:center;margin:16px 0 40px;
-  }
-  .cta-final h2{color:#fff;font-size:24px;margin-bottom:12px;}
-  .cta-final p{color:#CFE0D8;font-size:14.5px;line-height:1.6;max-width:400px;margin:0 auto;}
+  .approach-list{display:flex;flex-direction:column;gap:14px;}
+  .approach-card{background:var(--bg-card);border:1px solid var(--line);border-radius:16px;padding:22px;}
+  .approach-card h3{font-size:16.5px;font-weight:600;font-family:'Public Sans';color:var(--pine-deep);margin-bottom:8px;}
+  .approach-card p{font-size:14px;color:var(--muted);line-height:1.6;}
 
-  footer{padding:24px 0 40px;text-align:center;font-size:12.5px;color:var(--muted);}
-  footer .badge{
-    display:inline-block;background:var(--bg-card);border:1px solid var(--line);
-    padding:6px 14px;border-radius:100px;margin-bottom:10px;font-size:12px;color:var(--pine);
+  .modal-grid{display:flex;flex-direction:column;gap:14px;}
+  .modal-card{background:var(--bg-card);border:1px solid var(--line);border-radius:18px;padding:24px;}
+  .modal-card h3{font-size:17px;font-weight:600;font-family:'Fraunces';color:var(--pine-deep);margin-bottom:10px;}
+  .modal-card ul{list-style:none;padding:0;margin:0 0 16px;display:flex;flex-direction:column;gap:6px;}
+  .modal-card li{font-size:13.5px;color:var(--muted);display:flex;gap:8px;align-items:center;}
+  .modal-card li::before{content:"—";color:var(--brass);}
+
+  .about-card{background:var(--bg-card);border:1px solid var(--line);border-radius:20px;padding:28px;}
+  .about-card .name{font-family:'Fraunces';font-size:19px;font-weight:600;color:var(--pine-deep);}
+  .about-card .role{font-size:13.5px;color:var(--muted);margin-bottom:16px;}
+  .about-card ul{list-style:none;padding:0;margin:0 0 16px;display:flex;flex-direction:column;gap:8px;}
+  .about-card li{font-size:14px;color:var(--ink);display:flex;gap:8px;}
+  .about-card li::before{content:"✓";color:var(--pine);font-weight:700;}
+  .crp{display:inline-block;background:var(--brass-light);color:#6B5219;font-size:12.5px;font-weight:600;padding:5px 12px;border-radius:100px;}
+
+  .faq-item{border-bottom:1px solid var(--line);padding:18px 0;}
+  .faq-q{display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-weight:600;font-size:15px;gap:12px;}
+  .faq-q .plus{font-size:20px;color:var(--brass);transition:transform 0.2s;flex-shrink:0;}
+  .faq-item.open .plus{transform:rotate(45deg);}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height 0.25s ease;}
+  .faq-a p{padding-top:12px;color:var(--muted);font-size:14px;line-height:1.6;}
+
+  .final-cta{background:linear-gradient(180deg,var(--pine),var(--pine-deep));color:#fff;text-align:center;border-radius:28px;padding:44px 28px;margin:8px 0 8px;}
+  .final-cta h2{color:#fff;font-size:24px;margin-bottom:14px;}
+  .final-cta p{color:#D3E5DE;font-size:14.5px;margin-bottom:26px;}
+
+  footer{background:var(--pine-deep);color:#CFE0D8;padding:36px 0 30px;}
+  .foot-grid{display:flex;flex-direction:column;gap:24px;}
+  .foot-col h4{font-family:'Public Sans';font-size:12.5px;text-transform:uppercase;letter-spacing:0.08em;color:#8FB3A6;margin-bottom:10px;}
+  .foot-col p, .foot-col a{font-size:13.5px;color:#D3E5DE;line-height:1.8;display:block;}
+  .foot-legal{border-top:1px solid rgba(255,255,255,0.12);margin-top:24px;padding-top:20px;font-size:12px;color:#8FB3A6;text-align:center;}
+
+  @media(min-width:600px){
+    .icon-grid{grid-template-columns:repeat(3,1fr);}
+    .modal-grid{flex-direction:row;}
+    .modal-card{flex:1;}
   }
 </style>
 </head>
 <body>
 
 <header>
-  <div class="wrap header-inner">
-    <div class="brand">Modelo de página profissional</div>
+  <div class="header-inner">
+    <div class="brand">Angelica Padilha</div>
+    <a class="btn-mini" href="#contato">Agendar</a>
   </div>
 </header>
 
 <section class="hero">
   <div class="wrap">
-    <div class="avatar">AP</div>
-    <h1>Angelica Padilha</h1>
-    <p class="role">Psicóloga Clínica</p>
-    <p class="locale">Centro, Rio de Janeiro</p>
-    <svg class="breath-line" viewBox="0 0 600 40" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,20 C 60,20 60,6 120,6 S 180,34 240,34 S 300,20 360,20 S 420,6 480,6 S 540,34 600,34"/>
-    </svg>
-    <a class="btn-primary" href="#contato">Agendar uma consulta</a>
+    <span class="eyebrow">Psicóloga Clínica · Centro, RJ</span>
+    <div class="portrait">
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="38" r="18" fill="#EAF2EF" fill-opacity="0.85"/>
+        <path d="M20 88c0-18 13-30 30-30s30 12 30 30" fill="#EAF2EF" fill-opacity="0.85"/>
+      </svg>
+    </div>
+    <h1>Um espaço para se ouvir, <em>com profundidade.</em></h1>
+    <p class="sub">Psicoterapia para adultos e adolescentes, com escuta cuidadosa das questões de ansiedade, relações familiares e autoconhecimento.</p>
+    <a class="btn-primary" href="https://wa.me/5521964322828?text=Ol%C3%A1%2C%20Angelica!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">Agendar consulta</a>
+
+    <div class="badges">
+      <div class="badge-item"><div class="top">Escuta</div><div class="bot">Ética & Sigilo</div></div>
+      <div class="badge-item"><div class="top">Escuta ativa</div><div class="bot">Abordagem</div></div>
+      <div class="badge-item"><div class="top">Online</div><div class="bot">& Presencial</div></div>
+    </div>
   </div>
 </section>
 
-<section class="about">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Sobre o atendimento</div>
-      <h2>Um espaço para se ouvir</h2>
-    </div>
-    <p>A psicoterapia é um convite ao encontro consigo mesmo — um espaço de escuta cuidadosa, sem julgamentos, onde cada história encontra tempo e espaço para ser compreendida. O atendimento é conduzido com ética, sigilo e atenção às particularidades de cada pessoa.</p>
+<section class="pain">
+  <div class="wrap" style="text-align:center;">
+    <div class="eyebrow">Talvez você reconheça isso</div>
+    <h2>Ansiedade, sobrecarga ou dificuldade em lidar com mudanças na vida</h2>
+    <p>Muita gente convive anos com um mal-estar difícil de nomear — cansaço emocional, tensão nas relações familiares, sensação de estar sempre no limite. Reconhecer isso já é um passo importante, e buscar um espaço de escuta qualificada pode transformar a forma como você se relaciona consigo e com quem está ao seu redor.</p>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Como funciona</div>
-      <h2>Primeiros passos</h2>
-    </div>
-    <div class="steps">
-      <div class="step">
-        <div class="step-mark"></div>
-        <div>
-          <h3>Primeiro contato</h3>
-          <p>Uma breve conversa para entender o que te trouxe até aqui e esclarecer dúvidas sobre o atendimento.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-mark"></div>
-        <div>
-          <h3>Sessão inicial</h3>
-          <p>Um encontro para construirmos juntos o caminho do processo terapêutico, presencial ou online.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-mark"></div>
-        <div>
-          <h3>Acompanhamento contínuo</h3>
-          <p>Sessões regulares, no ritmo que fizer sentido para o seu processo.</p>
-        </div>
-      </div>
+    <div class="quote-block">
+      <p>"Acredito numa escuta que não julga — um espaço onde cada história encontra tempo para ser compreendida em profundidade."</p>
+      <div class="quote-who">Angelica Padilha</div>
     </div>
   </div>
 </section>
@@ -190,34 +186,158 @@
 <section>
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Áreas de atuação</div>
-      <h2>Temas trabalhados</h2>
+      <div class="eyebrow">Como posso ajudar</div>
+      <h2>Temas trabalhados em consulta</h2>
     </div>
-    <div class="tags">
-      <span class="tag">Ansiedade</span>
-      <span class="tag">Autoconhecimento</span>
-      <span class="tag">Relações familiares</span>
-      <span class="tag">Adolescência</span>
-      <span class="tag">Processos de luto</span>
+    <div class="icon-grid">
+      <div class="icon-card"><span class="ic">🌊</span><div class="lb">Ansiedade</div></div>
+      <div class="icon-card"><span class="ic">🪞</span><div class="lb">Autoconhecimento</div></div>
+      <div class="icon-card"><span class="ic">👨‍👩‍👧</span><div class="lb">Relações familiares</div></div>
+      <div class="icon-card"><span class="ic">🌱</span><div class="lb">Adolescência</div></div>
+      <div class="icon-card"><span class="ic">🕊️</span><div class="lb">Processos de luto</div></div>
+      <div class="icon-card"><span class="ic">💬</span><div class="lb">Conflitos e sofrimento</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Como funciona o trabalho</div>
+      <h2>Abordagem terapêutica</h2>
+    </div>
+    <div class="approach-list">
+      <div class="approach-card">
+        <h3>Escuta em profundidade</h3>
+        <p>O foco está na escuta ativa e na compreensão profunda do que você sente, sem julgamentos, construindo juntas um caminho de mudança real.</p>
+      </div>
+      <div class="approach-card">
+        <h3>Processo no seu tempo</h3>
+        <p>Cada pessoa tem um ritmo. O processo terapêutico respeita sua história e a complexidade de cada questão trazida.</p>
+      </div>
+      <div class="approach-card">
+        <h3>Ética e sigilo</h3>
+        <p>Todo o atendimento segue rigorosamente o código de ética profissional, garantindo total confidencialidade.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Atendimento</div>
+      <h2>Modalidades</h2>
+    </div>
+    <div class="modal-grid">
+      <div class="modal-card">
+        <h3>Presencial</h3>
+        <ul>
+          <li>Consultório no Centro do Rio</li>
+          <li>Sessões de 50 minutos</li>
+          <li>Ambiente privativo e acolhedor</li>
+        </ul>
+      </div>
+      <div class="modal-card">
+        <h3>Online</h3>
+        <ul>
+          <li>Videochamada segura</li>
+          <li>Flexibilidade de horário</li>
+          <li>Conforto de onde você estiver</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Sobre</div>
+      <h2>Angelica Padilha</h2>
+    </div>
+    <div class="about-card">
+      <div class="name">Angelica Padilha</div>
+      <div class="role">Psicóloga Clínica</div>
+      <ul>
+        <li>Graduação em Psicologia</li>
+        <li>Formação em abordagens terapêuticas contemporâneas</li>
+        <li>Atendimento a adultos e adolescentes</li>
+        <li>Experiência clínica com autoconhecimento e relações</li>
+      </ul>
+      <span class="crp">CRP 05/XXXXX (a confirmar) · Rio de Janeiro</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Dúvidas</div>
+      <h2>Perguntas frequentes</h2>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Quando devo iniciar a terapia?<span class="plus">+</span></div>
+      <div class="faq-a"><p>Quando questões emocionais começam a impactar sua qualidade de vida, relações ou rotina. Não é preciso esperar uma crise para buscar ajuda.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Qual a frequência das sessões?<span class="plus">+</span></div>
+      <div class="faq-a"><p>Geralmente semanal, com sessões de 50 minutos — o ritmo pode ser ajustado conforme o processo avança.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Como funciona o atendimento online?<span class="plus">+</span></div>
+      <div class="faq-a"><p>Por videochamada, em plataforma segura, com a mesma qualidade de escuta do presencial.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Como marco minha primeira sessão?<span class="plus">+</span></div>
+      <div class="faq-a"><p>É só enviar uma mensagem pelo WhatsApp para alinharmos o melhor horário.</p></div>
     </div>
   </div>
 </section>
 
 <section id="contato">
   <div class="wrap">
-    <div class="cta-final">
-      <h2>Vamos conversar?</h2>
-      <p>Envie uma mensagem para saber mais sobre o atendimento e verificar horários disponíveis.</p>
-      <a class="btn-primary" href="https://wa.me/5521964322828?text=Ol%C3%A1%2C%20Angelica!%20Gostaria%20de%20saber%20mais%20sobre%20o%20atendimento." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+    <div class="final-cta">
+      <h2>Pronta para começar?</h2>
+      <p>Dê o primeiro passo em direção a um espaço de escuta e cuidado.</p>
+      <a class="btn-primary" href="https://wa.me/5521964322828?text=Ol%C3%A1%2C%20Angelica!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">Agendar consulta</a>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="wrap">
-    <div class="badge">Exemplo de página — Connect Mídia Digital</div>
+  <div class="wrap foot-grid">
+    <div class="foot-col">
+      <h4>Contato</h4>
+      <a href="https://wa.me/5521964322828" target="_blank" rel="noopener">(21) 96432-2828</a>
+      <p>Centro, Rio de Janeiro</p>
+    </div>
+    <div class="foot-col">
+      <h4>Especialidades</h4>
+      <p>Ansiedade · Autoconhecimento · Relações familiares · Adolescência · Luto</p>
+    </div>
+    <div class="foot-col">
+      <h4>Horários</h4>
+      <p>Segunda a sexta · Atendimento presencial e online</p>
+    </div>
   </div>
+  <div class="foot-legal">CRP 05/XXXXX (a confirmar) · Exemplo de página — Connect Mídia Digital</div>
 </footer>
 
+<script>
+  function toggleFaq(el){
+    const item = el.parentElement;
+    const answer = item.querySelector('.faq-a');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-a').style.maxHeight = null;
+    });
+    if(!isOpen){
+      item.classList.add('open');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+    }
+  }
+</script>
 </body>
 </html>
